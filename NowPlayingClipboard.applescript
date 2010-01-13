@@ -11,6 +11,7 @@ tell application "iTunes"
 	
 	tell application "System Events"
 		set the clipboard to trackString
+		display dialog "Clipboard set to\n"&trackString buttons {"OK"} default button 1
 	end tell
 end tell
 
