@@ -16,4 +16,4 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 %.scpt : %.applescript
-	osacompile -o $(BUILD_DIR)/$@ $<
+	osacompile -o "$(BUILD_DIR)/$@" "$<"
