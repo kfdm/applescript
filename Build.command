@@ -5,4 +5,4 @@ script_path=`dirname $0`
 cd $script_path
 
 #Call the makefile
-make 
+make install
