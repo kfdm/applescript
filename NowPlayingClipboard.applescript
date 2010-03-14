@@ -8,10 +8,14 @@ tell application "iTunes"
 		set trackAlbum to album of current track
 		set trackString to trackArtist & " - " & trackName & " (" & trackAlbum & ")"
 	end if
-	
-	tell application "System Events"
-		set the clipboard to trackString
-		display dialog "Clipboard set to\n"&trackString buttons {"OK"} default button 1
-	end tell
 end tell
 
+tell application "System Events" to set the clipboard to trackString
+
+display dialog "Clipboard set to\n" & trackString buttons {"OK", "THL"} default button 1
+
+if the button returned of the result is "THL" then
+	tell application "The Hit List"
+		tell "Unassigned" to make new task with properties {title:trackString}
+	end tell
+end if
