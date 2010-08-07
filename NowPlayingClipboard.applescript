@@ -16,6 +16,6 @@ display dialog "Clipboard set to\n" & trackString buttons {"OK", "THL"} default 
 
 if the button returned of the result is "THL" then
 	tell application "The Hit List"
-		tell "Unassigned" to make new task with properties {title:trackString}
+		tell inbox to make new task with properties {title:trackString}
 	end tell
 end if
