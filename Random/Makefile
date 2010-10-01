@@ -1,7 +1,7 @@
 SOURCES := $(wildcard *.applescript)
 OBJECTS := $(subst .applescript,.scpt,$(SOURCES))
 BUILD_DIR = build
-SCRIPT_DIR = ~/Library/Scripts
+SCRIPT_DIR = ~/Library/Scripts/Random
 .PHONY: clean test
 
 all: $(BUILD_DIR) $(OBJECTS)
