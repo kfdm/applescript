@@ -1,4 +1,6 @@
+set volume 10
 tell application "iTunes"
+	set the sound volume to 100
 	try
 		play playlist "radio"
 	on error
